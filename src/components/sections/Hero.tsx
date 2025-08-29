@@ -15,21 +15,8 @@ const Hero = () => {
   const [currentText, setCurrentText] = useState('');
   const [isTyping, setIsTyping] = useState(true);
   const [roleIndex, setRoleIndex] = useState(0);
-  const [mousePosition, setMousePosition] = useState({ x: 50, y: 50 });
-
-  // Mouse tracking for subtle interactive background
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({
-        x: (e.clientX / window.innerWidth) * 100,
-        y: (e.clientY / window.innerHeight) * 100,
-      });
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
-
+  // Removed the unused mousePosition state and its useEffect hook
+  
   useEffect(() => {
     let typingTimeout: ReturnType<typeof setTimeout>;
 
@@ -61,47 +48,10 @@ const Hero = () => {
   }, [currentText, isTyping, roleIndex]);
 
   return (
-    <Section id="hero"> {/* className prop removed here */}
+    <Section id="hero">
       <div className="relative overflow-hidden min-h-screen flex items-center">
-        {/* Enhanced Background Elements */}
-        <div className="absolute inset-0">
-          {/* Subtle mouse-following gradient */}
-          <motion.div
-            className="absolute inset-0 opacity-20"
-            style={{
-              background: `radial-gradient(600px circle at ${mousePosition.x}% ${mousePosition.y}%, rgba(139, 92, 246, 0.15), transparent 40%)`
-            }}
-          />
-
-          {/* Grid Background */}
-          <div
-            className="absolute inset-0 opacity-20 dark:opacity-10"
-            style={{
-              backgroundImage: `
-                linear-gradient(rgba(138, 92, 246, 0.51) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(138, 92, 246, 0.5) 1px, transparent 1px)
-              `,
-              backgroundSize: '40px 40px',
-              backgroundPosition: '0 0, 0 0'
-            }}
-          />
-
-          {/* Grid fade effect */}
-          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-white/50 dark:to-black/50 pointer-events-none" />
-
-          {/* Floating elements for depth */}
-          <motion.div
-            animate={{ y: [-20, 20, -20], opacity: [0.3, 0.6, 0.3] }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-br from-violet-500/10 to-purple-600/10 rounded-full blur-3xl"
-          />
-          <motion.div
-            animate={{ y: [20, -20, 20], opacity: [0.4, 0.7, 0.4] }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute bottom-1/4 right-1/4 w-24 h-24 bg-gradient-to-br from-cyan-500/10 to-blue-600/10 rounded-full blur-2xl"
-          />
-        </div>
-
+        {/* The background elements are now in the root layout */}
+        
         {/* Content */}
         <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
           {/* Intro line */}

@@ -2,7 +2,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaTwitter, FaHeart, FaCode, FaCoffee, FaArrowUp } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaFacebook, FaArrowUp } from 'react-icons/fa';
 import { SiReact, SiNextdotjs, SiTailwindcss } from 'react-icons/si';
 
 const Footer = () => {
@@ -11,20 +11,20 @@ const Footer = () => {
   const socialLinks = [
     {
       icon: <FaGithub />,
-      href: "https://github.com/cindyfernandez",
+      href: "https://github.com/gumuss1ndy",
       label: "GitHub",
       color: "hover:text-gray-400"
     },
     {
       icon: <FaLinkedin />,
-      href: "https://linkedin.com/in/cindyfernandez",
+      href: "https://linkedin.com/in/cindyluna-fernandez-dev",
       label: "LinkedIn",
       color: "hover:text-blue-400"
     },
     {
-      icon: <FaTwitter />,
-      href: "https://twitter.com/cindyfernandez",
-      label: "Twitter",
+      icon: <FaFacebook />,
+      href: "https://facebook.com/gumuss1ndy",
+      label: "Facebook",
       color: "hover:text-sky-400"
     }
   ];
@@ -59,7 +59,7 @@ const Footer = () => {
               Cindy Luna Fernandez
             </h3>
             <p className="text-sm text-[--color-text-secondary] mb-4 leading-relaxed">
-              Full-Stack Developer passionate about creating beautiful, functional web experiences.
+              A Developer, and An Aspiring QA passionate about creating beautiful, functional web experiences.
             </p>
             <div className="flex items-center justify-center md:justify-start gap-2 text-sm text-[--color-text-secondary]">
               <span>Tuguegarao City, Philippines</span>
@@ -121,10 +121,10 @@ const Footer = () => {
               ))}
             </div>
             <a
-              href="mailto:fernandezcindy.dev@gmail.com"
-              className="text-sm text-violet-400 hover:text-violet-300 transition-colors duration-300"
+              href="mailto:fernandezcindyluna.dev@gmail.com"
+              className="text-sm text-violet-800 hover:text-violet-300 transition-colors duration-300"
             >
-              fernandezcindy.dev@gmail.com
+              fernandezcindyluna.dev@gmail.com
             </a>
           </motion.div>
         </div>

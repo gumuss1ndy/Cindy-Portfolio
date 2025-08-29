@@ -9,8 +9,8 @@ const Contact = () => {
     {
       icon: <FaEnvelope className="text-2xl" />,
       title: "Email",
-      value: "fernandezcindy.dev@gmail.com",
-      href: "mailto:fernandezcindy.dev@gmail.com",
+      value: "fernandezcindyluna.dev@gmail.com",
+      href: "mailto:fernandezcindyluna.dev@gmail.com",
       color: "from-purple-500 to-violet-600",
       description: "Drop me a line anytime"
     },

@@ -2,9 +2,9 @@
 
 import Section from '@/components/Section';
 import { motion } from 'framer-motion';
-import { FaLaptopCode, FaBiking, FaBookReader } from 'react-icons/fa';
+import { FaLaptopCode, FaMusic, FaBookReader, FaPen } from 'react-icons/fa';
+import React from 'react';
 
-// Define the tech stacks (no colors needed for pill design)
 const techStacks = [
   { name: 'React' },
   { name: 'Next.js' },
@@ -14,10 +14,25 @@ const techStacks = [
   { name: 'MongoDB' },
   { name: 'GraphQL' },
   { name: 'Git' },
+  { name: 'Angular' },
+  { name: 'Laravel' },
+  { name: 'HTML' },
+  { name: 'PHP' },
+  { name: 'CSS' },
+  { name: 'Express' },
+  { name: 'MySQL' },
+  { name: 'Bootstrap' },
 ];
 
+// Define a type for the props of the MotionDiv component
+interface MotionDivProps {
+  children: React.ReactNode;
+  className?: string;
+  delay: number;
+}
+
 // Enhanced helper function with better hover effects
-const MotionDiv = ({ children, className = '', delay }) => (
+const MotionDiv = ({ children, className = '', delay }: MotionDivProps) => (
   <motion.div
     className={`group bg-white/10 dark:bg-white/5 backdrop-blur-sm rounded-2xl p-6 border-2 border-violet-500/50 hover:border-violet-400 shadow-lg hover:shadow-violet-500/20 hover:shadow-xl transition-all duration-300 ${className}`}
     initial={{ opacity: 0, y: 50 }}
@@ -50,7 +65,7 @@ const About = () => {
         <MotionDiv className="lg:col-span-1 md:row-span-2" delay={0.2}>
           <div className="relative w-full aspect-square rounded-xl overflow-hidden mb-4 group-hover:shadow-lg transition-shadow duration-300">
             <img
-              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=2600&auto=format&fit=crop"
+              src='profile.jpg'
               alt="Profile"
               className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
             />
@@ -60,12 +75,12 @@ const About = () => {
             <h3 className="text-2xl font-bold text-[--color-text-primary] group-hover:text-violet-400 transition-colors duration-300">
               Cindy Luna Fernandez
             </h3>
-            <p className="text-md text-[--color-text-primary] opacity-70">Full-Stack Developer</p>
+            <p className="text-md text-[--color-text-primary] opacity-70">Developer | Aspiring QA</p>
             <p className="text-md text-[--color-text-primary] opacity-50 mt-1">Tuguegarao City, Philippines</p>
           </div>
         </MotionDiv>
 
-        {/* What I Do Card */}
+        {/* What Interests Me */}
         <MotionDiv className="md:col-span-1 lg:col-span-2" delay={0.3}>
           <h3 className="text-2xl font-bold mb-4 text-[--color-text-primary] flex items-center gap-2">
             <motion.div
@@ -74,11 +89,11 @@ const About = () => {
             >
               <FaLaptopCode className="text-violet-400" />
             </motion.div>
-            What I Do
+            What Interests me
           </h3>
           <p className="text-base text-[--color-text-primary] leading-relaxed">
-            I specialize in crafting elegant and efficient web applications from the ground up. My expertise spans both frontend development, where I focus on building intuitive user interfaces, and backend systems, where I design and implement robust, scalable APIs. I'm dedicated to writing clean, maintainable code that delivers exceptional performance and a seamless user experience.
-          </p>
+            From a young age, I was fascinated by both journalism and technology. This passion grew stronger as I was introduced to web development, where I discovered how creativity and logic could work together. Later, during my internship, I became interested in Quality Assurance (QA). To me, QA felt very similar to journalism—it requires keen attention to detail, accuracy, and a commitment to ensuring that nothing is overlooked. This mindset also shaped the way I approach development, seeing it not just as building something, but as crafting with precision and responsibility.
+           </p>
         </MotionDiv>
 
         {/* Tech I Use Card */}
@@ -127,20 +142,64 @@ const About = () => {
           </div>
         </MotionDiv>
 
-        {/* Beyond Work Card */}
+        {/* Beyond Coding Card */}
         <MotionDiv className="md:col-span-1" delay={0.5}>
-          <h3 className="text-2xl font-bold mb-4 text-[--color-text-primary] flex items-center gap-2">
+          <h3 className="text-2xl font-bold mb-6 text-[--color-text-primary] flex items-center gap-2">
             <motion.div
               whileHover={{ rotate: 15, scale: 1.1 }}
               transition={{ type: "spring", stiffness: 300, damping: 10 }}
             >
-              <FaBookReader className="text-violet-400" />
+              <FaLaptopCode className="text-violet-400" />
             </motion.div>
-            Beyond Work
+            Beyond Coding
           </h3>
-          <p className="text-base text-[--color-text-primary] leading-relaxed">
-            When I'm not coding, I enjoy losing myself in a good book, exploring nature on my bike, and experimenting with new recipes in the kitchen. These activities help me stay creative, balanced, and ready to tackle my next project with a fresh perspective.
-          </p>
+          
+          <div className="space-y-4">
+            {/* Listening to Music */}
+            <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-violet-500/20 hover:border-violet-400/40 transition-all duration-300">
+              <motion.div
+                whileHover={{ rotate: 360 }}
+                transition={{ duration: 0.6 }}
+                className="text-violet-400"
+              >
+                <FaMusic className="text-lg" />
+              </motion.div>
+              <div>
+                <h4 className="font-medium text-[--color-text-primary]">Listening to Music</h4>
+                <p className="text-sm text-[--color-text-primary] opacity-70">Melodies & rhythms</p>
+              </div>
+            </div>
+
+            {/* Reading */}
+            <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-violet-500/20 hover:border-violet-400/40 transition-all duration-300">
+              <motion.div
+                whileHover={{ rotate: 15, scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                className="text-violet-400"
+              >
+                <FaBookReader className="text-lg" />
+              </motion.div>
+              <div>
+                <h4 className="font-medium text-[--color-text-primary]">Reading</h4>
+                <p className="text-sm text-[--color-text-primary] opacity-70">Books & articles</p>
+              </div>
+            </div>
+
+            {/* Writing Stories */}
+            <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5 border border-violet-500/20 hover:border-violet-400/40 transition-all duration-300">
+              <motion.div
+                whileHover={{ rotate: 15, scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                className="text-violet-400"
+              >
+                <FaPen className="text-lg" />
+              </motion.div>
+              <div>
+                <h4 className="font-medium text-[--color-text-primary]">Writing Stories</h4>
+                <p className="text-sm text-[--color-text-primary] opacity-70">Creative expression</p>
+              </div>
+            </div>
+          </div>
         </MotionDiv>
 
       </div>

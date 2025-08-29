@@ -19,11 +19,12 @@ const experienceData = [
       'Gained hands-on experience with version control using Git and GitHub.'
     ],
     skills: [
-      { name: 'Laravel' },
-      { name: 'Figma' },
       { name: 'Front-End Development' },
       { name: 'Back-End Web Development' },
+      { name: 'UI/UX Design' },
       { name: 'Angular' },
+      { name: 'Laravel' },
+      { name: 'Figma' },
       { name: 'Jira' },
       { name: 'GitHub' },
       { name: 'Git' },
@@ -31,9 +32,14 @@ const experienceData = [
   },
 ];
 
+// Define a type for the props of the SkillBadge component
+interface SkillBadgeProps {
+  name: string;
+}
+
 // Helper component for skill badges
-const SkillBadge = ({ name }) => (
-  <span className="inline-flex items-center px-3 py-1 bg-gray-300/20 dark:bg-gray-700/30 text-gray-800 dark:text-gray-200 rounded-full text-xs font-medium backdrop-blur-sm border border-violet-300/30">
+const SkillBadge = ({ name }: SkillBadgeProps) => (
+  <span className="inline-flex items-center px-3 py-1 bg-black dark:bg-gray-700/30 text-white dark:text-gray-200 rounded-full text-xs font-medium backdrop-blur-sm border border-gray-800 dark:border-violet-500/40 hover:border-violet-500/60 hover:bg-gray-800 dark:hover:bg-gray-600/40 transition-all duration-300 shadow-md">
     {name}
   </span>
 );
@@ -94,7 +100,19 @@ const Experience = () => {
             {/* Footer: Skills */}
             <div className="flex flex-wrap gap-2 pt-4 border-t border-violet-300/30">
               {job.skills.map((skill, skillIndex) => (
-                <SkillBadge key={skillIndex} name={skill.name} />
+                <motion.div
+                  key={skillIndex}
+                  className="relative px-3 py-1 rounded-full bg-gray-800/90 backdrop-blur-sm border border-gray-700/50 shadow-lg transition-all duration-300"
+                  whileHover={{
+                    backgroundColor: "rgba(31, 41, 55, 0.95)",
+                    borderColor: "rgba(139, 92, 246, 0.5)",
+                    boxShadow: "0 0 20px rgba(139, 92, 246, 0.3), 0 4px 15px rgba(0, 0, 0, 0.3)"
+                  }}
+                >
+                  <span className="text-xs font-medium text-gray-300 hover:text-white transition-colors duration-300 select-none">
+                    {skill.name}
+                  </span>
+                </motion.div>
               ))}
             </div>
           </motion.div>

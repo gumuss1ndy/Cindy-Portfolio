@@ -7,28 +7,33 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 // Define the data for the three specified projects
 const projectsData = [
   {
-    title: 'RateSmart',
-    description: 'A platform that helps users compare and find the best loan rates from various financial institutions.',
-    image: 'https://images.unsplash.com/photo-1590402494052-b88339ed3c31?q=80&w=2670&auto=format&fit=crop',
-    demoLink: '#',
+    title: 'Eaglemind',
+    description: 'A multi-platform counseling app designed to connect users with mental health professionals.',
+    image: 'eaglemind.webp',
+    demoLink: 'https://counseling-system.vercel.app/login', 
     githubLink: '#',
-    skills: ['Next.js', 'Tailwind CSS', 'MongoDB', 'GraphQL'],
+    skills: ['Bootstrap','Node.js', 'Express', 'MongoDB'],
+    hasGithub: false,
+    hasDemo: true,
   },
   {
     title: 'Swiftography',
-    description: 'A minimalist photography portfolio website designed for a freelance photographer.',
-    image: 'https://images.unsplash.com/photo-1522031758652-f38b2d189190?q=80&w=2670&auto=format&fit=crop',
-    demoLink: '#',
-    githubLink: '#',
-    skills: ['React', 'CSS3', 'Framer Motion'],
+    description: 'A fan website for Taylor Swift, featuring a collection of fan-made content and information.',
+    image: 'swiftography.webp',
+    demoLink: '#', // Replace with an actual demo link
+    githubLink: '#', // Replace with an actual GitHub link
+    skills: ['Next.js', 'Tailwind CSS', 'Framer Motion'],
+    hasGithub: true,
+    hasDemo: true,
   },
   {
-    title: 'Eaglemind',
-    description: 'A personal productivity dashboard that helps users track habits, set goals, and manage daily tasks.',
-    image: 'https://images.unsplash.com/photo-1549692520-acc6669e2f0c?q=80&w=2670&auto=format&fit=crop',
-    demoLink: '#',
-    githubLink: '#',
-    skills: ['Node.js', 'Express', 'MongoDB'],
+    title: 'RateSmart',
+    description: 'A multi-tenant feedback application for managing feedback across different organizations.',
+    image: 'ratesmart.png',
+    githubLink: 'https://github.com/gumuss1ndy/ratesmart',
+    skills: ['Angular', 'Laravel', 'MySQL'],
+    hasGithub: true,
+    hasDemo: false,
   },
 ];
 
@@ -38,10 +43,9 @@ const Projects = () => {
       <div className="text-center mb-12">
         <h2 className="text-4xl font-extrabold text-[--color-text-primary] mb-4">Featured Projects</h2>
         <p className="text-lg text-[--color-text-primary] opacity-80 max-w-2xl mx-auto">
-          Showcasing my projects with interactive cards and demo links.
+          Showcasing my projects with interactive cards and live links.
         </p>
       </div>
-
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projectsData.map((project, index) => (
           <motion.div
@@ -66,31 +70,42 @@ const Projects = () => {
               <p className="text-sm text-[--color-text-secondary] mb-4">{project.description}</p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.skills.map((skill, skillIndex) => (
-                  <span
+                  <motion.div
                     key={skillIndex}
-                    className="inline-flex items-center px-3 py-1 bg-gray-300/20 dark:bg-gray-700/30 text-gray-800 dark:text-gray-200 rounded-full text-xs font-medium backdrop-blur-sm border border-violet-300/30"
+                    className="relative px-3 py-1 rounded-full bg-gray-800/90 backdrop-blur-sm border border-gray-700/50 shadow-lg transition-all duration-300"
+                    whileHover={{
+                      backgroundColor: "rgba(31, 41, 55, 0.95)",
+                      borderColor: "rgba(139, 92, 246, 0.5)",
+                      boxShadow: "0 0 20px rgba(139, 92, 246, 0.3), 0 4px 15px rgba(0, 0, 0, 0.3)"
+                    }}
                   >
-                    {skill}
-                  </span>
+                    <span className="text-xs font-medium text-gray-300 hover:text-white transition-colors duration-300 select-none">
+                      {skill}
+                    </span>
+                  </motion.div>
                 ))}
               </div>
               <div className="flex gap-4">
-                <a
-                  href={project.demoLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-violet-400 hover:text-violet-300 font-semibold transition-colors duration-200"
-                >
-                  <FaExternalLinkAlt /> Live Demo
-                </a>
-                <a
-                  href={project.githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-violet-400 hover:text-violet-300 font-semibold transition-colors duration-200"
-                >
-                  <FaGithub /> GitHub
-                </a>
+                {project.hasDemo && (
+                  <a
+                    href={project.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-violet-400 hover:text-violet-300 font-semibold transition-colors duration-200"
+                  >
+                    <FaExternalLinkAlt /> Live Link
+                  </a>
+                )}
+                {project.hasGithub && (
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-violet-400 hover:text-violet-300 font-semibold transition-colors duration-200"
+                  >
+                    <FaGithub /> GitHub
+                  </a>
+                )}
               </div>
             </div>
           </motion.div>

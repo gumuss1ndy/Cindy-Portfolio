@@ -1,61 +1,61 @@
 'use client';
 
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, Variants, Easing } from 'framer-motion';
 import { FaFacebook, FaInstagram, FaTwitter, FaGithub, FaEnvelope } from 'react-icons/fa';
 
 const socialLinks = [
   { 
     name: 'GitHub', 
     icon: FaGithub, 
-    href: 'https://github.com/your-username',
+    href: 'https://github.com/Gumuss1ndy',
     color: 'hover:text-gray-400',
     bgColor: 'hover:bg-gray-400/20'
   },
   { 
     name: 'X', 
     icon: FaTwitter, 
-    href: 'https://twitter.com/your-username',
+    href: 'https://twitter.com/gumussindy',
     color: 'hover:text-blue-400',
     bgColor: 'hover:bg-blue-400/20'
   },
   { 
     name: 'Instagram', 
     icon: FaInstagram, 
-    href: 'https://www.instagram.com/your-username',
+    href: 'https://www.instagram.com/gumussindy',
     color: 'hover:text-pink-400',
     bgColor: 'hover:bg-pink-400/20'
   },
   { 
     name: 'Facebook', 
     icon: FaFacebook, 
-    href: 'https://www.facebook.com/your-username',
+    href: 'https://www.facebook.com/Gumuss1ndy',
     color: 'hover:text-blue-600',
     bgColor: 'hover:bg-blue-600/20'
   },
   { 
     name: 'Email', 
     icon: FaEnvelope, 
-    href: 'mailto:fernandezcindy.dev@gmail.com',
+    href: 'mailto:fernandezcindyluna.dev@gmail.com',
     color: 'hover:text-violet-400',
     bgColor: 'hover:bg-violet-400/20'
   },
 ];
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0, x: -50 },
   visible: {
     opacity: 1,
     x: 0,
     transition: {
       duration: 0.6,
-      ease: "easeOut",
+      ease: "easeOut" as Easing,
       staggerChildren: 0.1,
     },
   },
 };
 
-const iconVariants = {
+const iconVariants: Variants = {
   hidden: { opacity: 0, x: -20, scale: 0.8 },
   visible: { 
     opacity: 1, 
@@ -63,7 +63,7 @@ const iconVariants = {
     scale: 1,
     transition: { 
       duration: 0.5, 
-      ease: 'easeOut',
+      ease: 'easeOut' as Easing,
       type: "spring",
       stiffness: 200,
       damping: 15

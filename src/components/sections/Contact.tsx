@@ -57,7 +57,7 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            Let's Build Something{' '}
+            Let&apos;s Build Something{' '}
             <span className="bg-gradient-to-r from-violet-500 to-purple-600 bg-clip-text text-transparent">
               Amazing
             </span>
@@ -69,7 +69,7 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Ready to turn your ideas into reality? I'm always excited to work on new projects,
+            Ready to turn your ideas into reality? I&apos;m always excited to work on new projects,
             collaborate with fellow developers, or discuss the latest in web development.
           </motion.p>
         </div>

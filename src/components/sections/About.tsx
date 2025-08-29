@@ -4,6 +4,7 @@ import Section from '@/components/Section';
 import { motion } from 'framer-motion';
 import { FaLaptopCode, FaMusic, FaBookReader, FaPen } from 'react-icons/fa';
 import React from 'react';
+import Image from 'next/image'; // Import the Image component
 
 const techStacks = [
   { name: 'React' },
@@ -64,10 +65,13 @@ const About = () => {
         {/* Profile Card */}
         <MotionDiv className="lg:col-span-1 md:row-span-2" delay={0.2}>
           <div className="relative w-full aspect-square rounded-xl overflow-hidden mb-4 group-hover:shadow-lg transition-shadow duration-300">
-            <img
-              src='profile.jpg'
+            {/* Replace <img> with Next.js's <Image /> component */}
+            <Image
+              src='/profile.jpg' // Next.js requires a leading slash for public folder images
               alt="Profile"
-              className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+              fill={true} // Use `fill` to make the image fill its parent container
+              className="object-cover transition-transform duration-500 group-hover:scale-110"
+              quality={100} // Optional: Adjust quality
             />
             <div className="absolute inset-0 bg-gradient-to-t from-violet-600/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </div>
@@ -100,9 +104,9 @@ const About = () => {
         <MotionDiv className="md:col-span-2 lg:col-span-1" delay={0.4}>
           <h3 className="text-2xl font-bold mb-6 text-[--color-text-primary]">Tech I Use</h3>
           <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-            {techStacks.map((tech, index) => (
+            {techStacks.map((tech) => (
               <motion.div
-                key={index}
+                key={tech.name} // A unique name is a better key than the index
                 className="group cursor-pointer"
                 initial={{ opacity: 0, scale: 0.8, y: 20 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -113,7 +117,7 @@ const About = () => {
                 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{
-                  delay: 0.05 * index,
+                  delay: 0.05, // You can adjust this for each item or remove the delay
                   type: "spring",
                   stiffness: 300,
                   damping: 20,

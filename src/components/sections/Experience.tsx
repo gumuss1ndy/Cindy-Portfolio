@@ -3,7 +3,7 @@
 import Section from '@/components/Section';
 import { motion } from 'framer-motion';
 import { FaMapMarkerAlt, FaClock } from 'react-icons/fa';
-import { SiNextdotjs, SiReact, SiTypescript, SiTailwindcss, SiNodedotjs, SiMongodb, SiJira, SiGit, SiFigma } from 'react-icons/si';
+// Removed all unused Si* icons to resolve the warnings
 
 // Define the data for your experience
 const experienceData = [
@@ -32,17 +32,11 @@ const experienceData = [
   },
 ];
 
-// Define a type for the props of the SkillBadge component
-interface SkillBadgeProps {
-  name: string;
-}
-
-// Helper component for skill badges
-const SkillBadge = ({ name }: SkillBadgeProps) => (
-  <span className="inline-flex items-center px-3 py-1 bg-black dark:bg-gray-700/30 text-white dark:text-gray-200 rounded-full text-xs font-medium backdrop-blur-sm border border-gray-800 dark:border-violet-500/40 hover:border-violet-500/60 hover:bg-gray-800 dark:hover:bg-gray-600/40 transition-all duration-300 shadow-md">
-    {name}
-  </span>
-);
+// Removed the unused SkillBadge component and its props type
+// interface SkillBadgeProps {
+//   name: string;
+// }
+// const SkillBadge = ({ name }: SkillBadgeProps) => (...)
 
 const Experience = () => {
   return (

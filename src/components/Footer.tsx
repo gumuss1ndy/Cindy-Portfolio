@@ -1,4 +1,3 @@
-// components/Footer.tsx
 'use client';
 
 import { motion } from 'framer-motion';
@@ -78,7 +77,7 @@ const Footer = () => {
               Quick Links
             </h4>
             <div className="space-y-2">
-              {['About', 'Projects', 'Contact'].map((link, index) => (
+              {['About', 'Projects', 'Contact'].map((link) => (
                 <motion.a
                   key={link}
                   href={`#${link.toLowerCase()}`}
@@ -104,9 +103,9 @@ const Footer = () => {
               Lets Connect
             </h4>
             <div className="flex items-center justify-center md:justify-end gap-4 mb-4">
-              {socialLinks.map((social, index) => (
+              {socialLinks.map((social) => (
                 <motion.a
-                  key={index}
+                  key={social.href} // Using href as a stable key
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -160,9 +159,9 @@ const Footer = () => {
             <div className="hidden md:flex items-center gap-2 text-sm text-[--color-text-secondary]">
               <span>Built with</span>
               <div className="flex items-center gap-2">
-                {techStack.map((tech, index) => (
+                {techStack.map((tech) => (
                   <motion.div
-                    key={index}
+                    key={tech.name}
                     className={`text-lg ${tech.color}`}
                     whileHover={{ scale: 1.2, rotate: 5 }}
                     transition={{ type: "spring", stiffness: 300, damping: 20 }}

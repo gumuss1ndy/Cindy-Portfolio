@@ -3,23 +3,24 @@
 import Section from '@/components/Section';
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import Image from 'next/image'; // Import the Image component
 
 // Define the data for the three specified projects
 const projectsData = [
   {
     title: 'Eaglemind',
     description: 'A multi-platform counseling app designed to connect users with mental health professionals.',
-    image: 'eaglemind.webp',
-    demoLink: 'https://counseling-system.vercel.app/login', 
+    image: '/eaglemind.webp', // Add a leading slash for public folder access
+    demoLink: 'https://counseling-system.vercel.app/login',
     githubLink: '#',
-    skills: ['Bootstrap','Node.js', 'Express', 'MongoDB'],
+    skills: ['Bootstrap', 'Node.js', 'Express', 'MongoDB'],
     hasGithub: false,
     hasDemo: true,
   },
   {
     title: 'Swiftography',
     description: 'A fan website for Taylor Swift, featuring a collection of fan-made content and information.',
-    image: 'swiftography.webp',
+    image: '/swiftography.webp', // Add a leading slash for public folder access
     demoLink: '#', // Replace with an actual demo link
     githubLink: '#', // Replace with an actual GitHub link
     skills: ['Next.js', 'Tailwind CSS', 'Framer Motion'],
@@ -29,7 +30,7 @@ const projectsData = [
   {
     title: 'RateSmart',
     description: 'A multi-tenant feedback application for managing feedback across different organizations.',
-    image: 'ratesmart.png',
+    image: '/ratesmart.png', // Add a leading slash for public folder access
     githubLink: 'https://github.com/gumuss1ndy/ratesmart',
     skills: ['Angular', 'Laravel', 'MySQL'],
     hasGithub: true,
@@ -57,10 +58,13 @@ const Projects = () => {
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
             <div className="relative h-48">
-              <img
+              {/* Replace <img> with Next.js's <Image /> component */}
+              <Image
                 src={project.image}
                 alt={project.title}
-                className="w-full h-full object-cover"
+                fill={true} // Use `fill` to make the image fill its parent container
+                className="object-cover"
+                quality={100} // Optional: Adjust quality
               />
             </div>
             <div className="p-6">

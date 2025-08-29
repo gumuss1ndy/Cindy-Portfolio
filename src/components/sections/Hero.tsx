@@ -107,7 +107,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 1 }}
             className="mt-8 text-base md:text-lg text-[--color-text-primary] max-w-2xl mx-auto leading-relaxed"
           >
-            Blending creativity, journalism, and code to deliver impactful user experiences.
+            Blending creativity and code to deliver impactful user experiences.
           </motion.p>
 
           {/* Call-to-actions */}

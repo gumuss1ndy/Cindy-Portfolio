@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 import { FaArrowRight } from 'react-icons/fa';
 
 // Define roles outside the component
-const roles = ['developer.', 'journalist.', 'writer.'];
+const roles = ['developer.', 'QA tester.'];
 
 const Hero = () => {
   const [currentText, setCurrentText] = useState('');

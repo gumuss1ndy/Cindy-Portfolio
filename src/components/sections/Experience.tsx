@@ -8,25 +8,28 @@ import { FaMapMarkerAlt, FaClock } from 'react-icons/fa';
 // Define the data for your experience
 const experienceData = [
   {
-    title: 'Software Development Intern',
+    title: 'Quality Assurance Intern',
     company: 'North Triam Tech Inc.',
     location: 'Tuguegarao, Cagayan Valley, Philippines',
     workType: 'Hybrid',
     duration: 'June 2024 - August 2024 (3 mos)',
     responsibilities: [
-      'Developed and maintained software solutions with Laravel.',
-      'Contributed to front-end development using Angular, managing tasks in Jira.',
-      'Gained hands-on experience with version control using Git and GitHub.'
+      'Performed manual testing on web applications to identify and document bugs, UI inconsistencies, and functional issues.',
+      'Created detailed test cases and executed test scenarios based on project requirements.',
+      'Collaborated with developers and project managers through Jira to track and verify reported defects.',
+      'Assisted in regression testing after deployment and verified bug fixes before production release.',
+      'Contributed feedback to improve user experience and software quality across multiple projects.',
     ],
     skills: [
-      { name: 'Front-End Development' },
-      { name: 'Back-End Web Development' },
-      { name: 'UI/UX Design' },
-      { name: 'Angular' },
-      { name: 'Laravel' },
-      { name: 'Figma' },
+      { name: 'Manual Testing' },
+      { name: 'Regression Testing' },
+      { name: 'Functional Testing' },
+      { name: 'Exploratory Testing' },
+      { name: 'Postman' },
       { name: 'Jira' },
-      { name: 'GitHub' },
+      { name: 'Test Case Design' },
+      { name: 'Bug Reporting' },
+      { name: 'Collaboration' },
       { name: 'Git' },
     ]
   },

@@ -20,9 +20,10 @@ const techStacks = [
   { name: 'HTML' },
   { name: 'PHP' },
   { name: 'CSS' },
-  { name: 'Express' },
   { name: 'MySQL' },
   { name: 'Bootstrap' },
+  { name: 'Jira' },
+  { name: 'Excel' },
 ];
 
 // Define a type for the props of the MotionDiv component
@@ -79,7 +80,7 @@ const About = () => {
             <h3 className="text-2xl font-bold text-[--color-text-primary] group-hover:text-violet-400 transition-colors duration-300">
               Cindy Luna Fernandez
             </h3>
-            <p className="text-md text-[--color-text-primary] opacity-70">Developer | Aspiring QA</p>
+            <p className="text-md text-[--color-text-primary] opacity-70">Developer | QA Tester</p>
             <p className="text-md text-[--color-text-primary] opacity-50 mt-1">Tuguegarao City, Philippines</p>
           </div>
         </MotionDiv>
@@ -96,7 +97,7 @@ const About = () => {
             What Interests me
           </h3>
           <p className="text-base text-[--color-text-primary] leading-relaxed">
-            From a young age, I was fascinated by both journalism and technology. This passion grew stronger as I was introduced to web development, where I discovered how creativity and logic could work together. Later, during my internship, I became interested in Quality Assurance (QA). To me, QA felt very similar to journalism—it requires keen attention to detail, accuracy, and a commitment to ensuring that nothing is overlooked. This mindset also shaped the way I approach development, seeing it not just as building something, but as crafting with precision and responsibility.
+            From a young age, I was fascinated by technology and how it shapes the way we interact with the world. This curiosity grew stronger as I explored web development, where creativity and logic come together to solve real problems. During my internship, I discovered my passion for Quality Assurance (QA). I realized that QA requires a keen eye for detail, strong analytical thinking, and a commitment to ensuring that every part of a system works as intended. This mindset shaped how I approach development — not just as building something functional, but as crafting with precision, care, and responsibility.
            </p>
         </MotionDiv>
 

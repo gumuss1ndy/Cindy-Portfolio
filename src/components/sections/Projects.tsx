@@ -10,7 +10,7 @@ const projectsData = [
   {
     title: 'Eaglemind',
     description: 'A multi-platform counseling app designed to connect users with mental health professionals.',
-    image: '/eaglemind.webp', // Add a leading slash for public folder access
+    image: '/eaglemind.webp', 
     demoLink: 'https://counseling-system.vercel.app/login',
     githubLink: '#',
     skills: ['Bootstrap', 'Node.js', 'Express', 'MongoDB'],
@@ -19,10 +19,10 @@ const projectsData = [
   },
   {
     title: 'Swiftography',
-    description: 'A fan website for Taylor Swift, featuring a collection of fan-made content and information.',
-    image: '/swiftography.webp', // Add a leading slash for public folder access
-    demoLink: '#', // Replace with an actual demo link
-    githubLink: '#', // Replace with an actual GitHub link
+    description: 'A fan website for Taylor Swift, featuring fan-made content and information. Originally made during my 2nd year in college, and currently being recreated.',
+    image: '/swiftography.webp', 
+    demoLink: 'https://swiftography.vercel.app', 
+    githubLink: 'https://github.com/gumuss1ndy/Swiftographyv2', 
     skills: ['Next.js', 'Tailwind CSS', 'Framer Motion'],
     hasGithub: true,
     hasDemo: true,
@@ -30,7 +30,7 @@ const projectsData = [
   {
     title: 'RateSmart',
     description: 'A multi-tenant feedback application for managing feedback across different organizations.',
-    image: '/ratesmart.png', // Add a leading slash for public folder access
+    image: '/ratesmart.png', 
     githubLink: 'https://github.com/gumuss1ndy/ratesmart',
     skills: ['Angular', 'Laravel', 'MySQL'],
     hasGithub: true,

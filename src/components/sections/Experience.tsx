@@ -8,6 +8,31 @@ import { FaMapMarkerAlt, FaClock } from 'react-icons/fa';
 // Define the data for your experience
 const experienceData = [
   {
+    title: 'Full Stack Developer',
+    company: 'Freelance',
+    location: 'Tuguegarao City, Philippines',
+    workType: 'Remote',
+    duration: 'Jul 2025 - Present',
+    responsibilities: [
+      'Designed and developed responsive web applications for multiple clients, integrating databases, APIs, and reusable UI components.',
+      'Built scalable features using React, Next.js, Node.js, and Laravel, ensuring fast load times and high usability.',
+      'Implemented automated form validations, authentication workflows, and dashboard analytics to improve user experience.',
+      'Collaborated with clients to gather requirements, deploy releases, and provide technical documentation.',
+    ],
+    skills: [
+      { name: 'React' },
+      { name: 'Next.js' },
+      { name: 'Node.js' },
+      { name: 'Laravel' },
+      { name: 'API Integration' },
+      { name: 'Database Design' },
+      { name: 'Authentication' },
+      { name: 'UI/UX' },
+      { name: 'Client Communication' },
+      { name: 'Documentation' },
+    ]
+  },
+  {
     title: 'Quality Assurance Intern',
     company: 'North Triam Tech Inc.',
     location: 'Tuguegarao, Cagayan Valley, Philippines',

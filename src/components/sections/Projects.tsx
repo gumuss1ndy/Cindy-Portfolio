@@ -36,6 +36,15 @@ const projectsData = [
     hasGithub: true,
     hasDemo: false,
   },
+  {
+    title: 'ROVOCS',
+    description: 'A real-time respiratory health monitoring system that collects exhaled-breath data through ESP32 sensors and visualizes results on a responsive web dashboard.',
+    image: '/rovocs.png', 
+    githubLink: '#',
+    skills: ['Next.js', 'ESP32', 'IoT', 'Node.js'],
+    hasGithub: false,
+    hasDemo: false,
+  },
 ];
 
 const Projects = () => {
@@ -47,7 +56,7 @@ const Projects = () => {
           Showcasing my projects with interactive cards and live links.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 max-w-7xl mx-auto">
         {projectsData.map((project, index) => (
           <motion.div
             key={index}

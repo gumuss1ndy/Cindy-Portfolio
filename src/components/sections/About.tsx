@@ -97,7 +97,7 @@ const About = () => {
             What Interests me
           </h3>
           <p className="text-base text-[--color-text-primary] leading-relaxed">
-            From a young age, I was fascinated by technology and how it shapes the way we interact with the world. This curiosity grew stronger as I explored web development, where creativity and logic come together to solve real problems. During my internship, I discovered my passion for Quality Assurance (QA). I realized that QA requires a keen eye for detail, strong analytical thinking, and a commitment to ensuring that every part of a system works as intended. This mindset shaped how I approach development — not just as building something functional, but as crafting with precision, care, and responsibility.
+           From a young age, I was fascinated by technology and how it shapes the way we interact with the world. This curiosity grew stronger as I explored web development, where creativity and logic come together to solve real-world problems. During my internship and academic projects, I developed a strong interest in full-stack development, gaining hands-on experience in building both user-friendly interfaces and reliable backend systems. I learned the importance of writing clean, maintainable code, understanding how different parts of an application work together, and continuously improving performance and usability. This perspective shaped how I approach development—not just as building features, but as creating complete, scalable solutions with care, efficiency, and long-term value.
            </p>
         </MotionDiv>
 

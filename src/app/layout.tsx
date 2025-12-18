@@ -33,6 +33,9 @@ export default function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <title>Cindy | Full Stack Developer</title>
+      </head>
       <body className={inter.className}>
         <Providers>
           {/* Global Background Elements */}

@@ -40,10 +40,10 @@ const projectsData = [
     title: 'ROVOCS',
     description: 'A real-time respiratory health monitoring system that collects exhaled-breath data through ESP32 sensors and visualizes results on a responsive web dashboard.',
     image: '/rovocs.png', 
-    githubLink: '#',
+    demoLink: 'https://rovocs-web.vercel.app', 
     skills: ['Next.js', 'ESP32', 'IoT', 'Node.js'],
     hasGithub: false,
-    hasDemo: false,
+    hasDemo: true,
   },
 ];
 
